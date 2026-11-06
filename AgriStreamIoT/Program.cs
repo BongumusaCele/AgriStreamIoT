@@ -1,7 +1,10 @@
+using AgriStreamIoT.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<AgriStreamRepository>();
 
 var app = builder.Build();
 

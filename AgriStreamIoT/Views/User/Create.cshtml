@@ -1,0 +1,24 @@
+﻿@model AgriStreamIoT.Models.Users
+
+<h2>Add New User</h2>
+<hr />
+
+<form asp-controller="User" asp-action="Create" method="post">
+  <div class="form-group">
+    <label asp-for="Username">Username</label>
+    <input asp-for="Username" class="form-control" placeholder="Enter username">
+    <small class="form-text text-muted">We'll never share your username with anyone else.</small>
+  </div>
+  
+  <div class="form-group">
+    <label asp-for="Password">Password</label>
+    <input asp-for="Password" type="password" class="form-control" placeholder="Password">
+  </div>
+  
+   <div class="form-group">
+    <label asp-for="Role">Role</label>
+    <input asp-for="Role" class="form-control" placeholder="Enter role">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
