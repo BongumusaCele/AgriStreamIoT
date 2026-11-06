@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AgriStreamIoT.Models.Users>
+
+@{
+    ViewData["Title"] = "User List";
+}
+
+@* <h2>Add New User</h2>
+
+<!-- Form that submits to Home/Create -->
+<form asp-controller="Home" asp-action="Create" method="post">
+    <div>
+        <label>UserId:</label>
+        <input type="text" name="UserId" required />
+    </div>
+    <div>
+        <label>Username:</label>
+        <input type="text" name="Username" required />
+    </div>
+    <button type="submit">Save</button>
+</form>
+
+<hr /> *@
+
+<h2>User Table</h2>
+
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserId</td>
+                <td>@user.Username</td>
+                <td>@user.Password</td>
+                <td>@user.Role</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
